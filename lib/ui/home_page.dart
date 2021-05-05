@@ -153,10 +153,10 @@ class _HomePageState extends State<HomePage> {
                               indicatorWeight: 5,
                               tabs: [
                                 Tab(
-                                  text: 'ALL',
+                                  text: 'NEIGNHBORHOOD',
                                 ),
                                 Tab(
-                                  text: 'RBSC',
+                                  text: 'MY ENDEAVOR',
                                 ),
                               ],
                             ),

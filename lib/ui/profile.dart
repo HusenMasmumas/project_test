@@ -29,6 +29,30 @@ class _ProfileState extends State<Profile> {
                             height: 50,
                           ),
                           Padding(
+                            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                            child: Row(
+                              children: [
+                                IconButton(
+                                  icon: const Icon(
+                                    Icons.volume_up,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () {
+                                    setState(() {});
+                                  },
+                                ),
+                                Spacer(),
+                                Icon(
+                                  Icons.ac_unit,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Padding(
                             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                             child: Row(
                               children: [
@@ -39,7 +63,7 @@ class _ProfileState extends State<Profile> {
                                     clipBehavior: Clip.hardEdge,
                                     color: Colors.transparent,
                                     child: CircleAvatar(
-                                      radius: 25,
+                                      radius: 45,
                                       backgroundColor: Colors.white,
                                       child: CircleAvatar(
                                         minRadius: 20,
@@ -52,17 +76,44 @@ class _ProfileState extends State<Profile> {
                                 SizedBox(
                                   width: 40,
                                 ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'Louis Saville',
+                                      style: TextStyle(
+                                        fontSize: 30,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Young and passionate rider',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                            child: Row(
+                              children: [
+                                Icon(Icons.backpack),
+                                SizedBox(
+                                  width: 20,
+                                ),
                                 Text(
-                                  'Activity',
+                                  'Produbicky kraj',
                                   style: TextStyle(
-                                    fontFamily: 'Raleway',
-                                    fontSize: 30,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Spacer(),
-                                Icon(Icons.settings)
                               ],
                             ),
                           ),
@@ -70,45 +121,6 @@ class _ProfileState extends State<Profile> {
                             height: 20,
                           ),
                         ],
-                      ),
-                    ),
-                    Container(
-                      height: 50,
-                      child: Material(
-                        color: Colors.grey.withOpacity(0.0),
-                        child: Theme(
-                          data: ThemeData(
-                            highlightColor: Colors.transparent,
-                            splashColor: Colors.transparent,
-                          ),
-                          child: TabBar(
-                            enableFeedback: false,
-                            labelStyle: TextStyle(
-                              fontFamily: 'Raleway',
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1,
-                            ),
-                            unselectedLabelColor: Colors.white,
-                            indicator: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(10),
-                                  topRight: Radius.circular(10),
-                                ),
-                                color: Colors.white.withOpacity(0.0)),
-                            labelColor: Colors.black,
-                            indicatorColor: CupertinoColors.systemYellow,
-                            indicatorWeight: 5,
-                            tabs: [
-                              Tab(
-                                text: 'ALL',
-                              ),
-                              Tab(
-                                text: 'RBSC',
-                              ),
-                            ],
-                          ),
-                        ),
                       ),
                     ),
                   ]),

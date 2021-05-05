@@ -141,14 +141,14 @@ class _HomePageState extends State<HomePage> {
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: 1,
                               ),
-                              unselectedLabelColor: Colors.white,
+                              unselectedLabelColor: Colors.grey[300],
                               indicator: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(10),
                                     topRight: Radius.circular(10),
                                   ),
                                   color: Colors.white.withOpacity(0.0)),
-                              labelColor: Colors.black,
+                              labelColor: Colors.white,
                               indicatorColor: CupertinoColors.systemYellow,
                               indicatorWeight: 5,
                               tabs: [

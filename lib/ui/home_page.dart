@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_test/ui/profile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,12 +30,12 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
             ),
             Icon(
-              Icons.home,
+              Icons.play_circle_fill,
               size: 30,
               color: Colors.white,
             ),
             Icon(
-              Icons.perm_camera_mic,
+              Icons.wine_bar_outlined,
               size: 30,
               color: Colors.white,
             ),
@@ -67,42 +68,54 @@ class _HomePageState extends State<HomePage> {
                             SizedBox(
                               height: 50,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    child: Material(
-                                      elevation: 10.0,
-                                      shape: CircleBorder(),
-                                      clipBehavior: Clip.hardEdge,
-                                      color: Colors.transparent,
-                                      child: CircleAvatar(
-                                        radius: 25,
-                                        backgroundColor: Colors.white,
+                            FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    settings: RouteSettings(name: 'Profile'),
+                                    builder: (context) => Profile(),
+                                  ),
+                                );
+                              },
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      child: Material(
+                                        elevation: 10.0,
+                                        shape: CircleBorder(),
+                                        clipBehavior: Clip.hardEdge,
+                                        color: Colors.transparent,
                                         child: CircleAvatar(
-                                          minRadius: 20,
-                                          backgroundImage: AssetImage(
-                                              'assets/images/a1.jpg'),
+                                          radius: 25,
+                                          backgroundColor: Colors.white,
+                                          child: CircleAvatar(
+                                            minRadius: 20,
+                                            backgroundImage: AssetImage(
+                                                'assets/images/a1.jpg'),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 40,
-                                  ),
-                                  Text(
-                                    'Activity',
-                                    style: TextStyle(
-                                      fontFamily: 'Raleway',
-                                      fontSize: 30,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                                    SizedBox(
+                                      width: 40,
                                     ),
-                                  ),
-                                  Spacer(),
-                                  Icon(Icons.ac_unit)
-                                ],
+                                    Text(
+                                      'Activity',
+                                      style: TextStyle(
+                                        fontFamily: 'Raleway',
+                                        fontSize: 30,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Icon(Icons.settings)
+                                  ],
+                                ),
                               ),
                             ),
                             SizedBox(
